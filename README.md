@@ -6,5 +6,5 @@ Kotlin Multiplatform Framework for the Story iOS application.
 
 ### Carthage
 ```
-github "JUSTINMKAUFMAN/StoryFramework"
+github "makegoodstuff/StoryFramework"
 ```
