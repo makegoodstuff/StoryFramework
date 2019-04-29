@@ -1,0 +1,3 @@
+[submodule "StoryKMP"]
+	path = StoryKMP
+	url = https://github.com/makegoodstuff/StoryKMP
