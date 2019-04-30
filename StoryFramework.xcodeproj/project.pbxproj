@@ -6,25 +6,11 @@
 	objectVersion = 51;
 	objects = {
 
-/* Begin PBXBuildFile section */
-		8F0249A61B9989B1005D8035 /* StoryFramework.h in Headers */ = {isa = PBXBuildFile; fileRef = 8F0249A51B9989B1005D8035 /* StoryFramework.h */; settings = {ATTRIBUTES = (Public, ); }; };
-/* End PBXBuildFile section */
-
 /* Begin PBXFileReference section */
 		8F0249A21B9989B1005D8035 /* StoryFramework.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = StoryFramework.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8F0249A51B9989B1005D8035 /* StoryFramework.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = StoryFramework.h; sourceTree = "<group>"; };
 		8F0249A71B9989B1005D8035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
-
-/* Begin PBXFrameworksBuildPhase section */
-		8F02499E1B9989B1005D8035 /* Frameworks */ = {
-			isa = PBXFrameworksBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
 		8F0249981B9989B1005D8035 = {
@@ -62,27 +48,12 @@
 		};
 /* End PBXGroup section */
 
-/* Begin PBXHeadersBuildPhase section */
-		8F02499F1B9989B1005D8035 /* Headers */ = {
-			isa = PBXHeadersBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-				8F0249A61B9989B1005D8035 /* StoryFramework.h in Headers */,
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXHeadersBuildPhase section */
-
 /* Begin PBXNativeTarget section */
 		8F0249A11B9989B1005D8035 /* StoryFramework */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 8F0249B61B9989B1005D8035 /* Build configuration list for PBXNativeTarget "StoryFramework" */;
 			buildPhases = (
 				0676E298226D2C86001B476F /* Compile Kotlin Native */,
-				8F02499D1B9989B1005D8035 /* Sources */,
-				8F02499E1B9989B1005D8035 /* Frameworks */,
-				8F02499F1B9989B1005D8035 /* Headers */,
-				8F0249A01B9989B1005D8035 /* Resources */,
 				D03A8C9D2277BF1F00A8B39D /* ShellScript */,
 			);
 			buildRules = (
@@ -128,16 +99,6 @@
 		};
 /* End PBXProject section */
 
-/* Begin PBXResourcesBuildPhase section */
-		8F0249A01B9989B1005D8035 /* Resources */ = {
-			isa = PBXResourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXResourcesBuildPhase section */
-
 /* Begin PBXShellScriptBuildPhase section */
 		0676E298226D2C86001B476F /* Compile Kotlin Native */ = {
 			isa = PBXShellScriptBuildPhase;
@@ -172,19 +133,9 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "cp -f -R $SRCROOT/StoryKMP/common/build/bin/ios/mainDebugFramework/main.framework $BUILT_PRODUCTS_DIR/StoryFramework.framework\n\ncp -f -R $SRCROOT/StoryKMP/common/build/bin/ios/mainDebugFramework/main.framework.dSYM $BUILT_PRODUCTS_DIR/StoryFramework.framework.dSYM\n";
+			shellScript = "rm -rf $BUILT_PRODUCTS_DIR/StoryFramework.framework\nrm -rf $BUILT_PRODUCTS_DIR/StoryFramework.framework.dSYM\n\ncp -R $SRCROOT/StoryKMP/common/build/bin/ios/mainDebugFramework/main.framework $BUILT_PRODUCTS_DIR/StoryFramework.framework\n\ncp -R $SRCROOT/StoryKMP/common/build/bin/ios/mainDebugFramework/main.framework.dSYM $BUILT_PRODUCTS_DIR/StoryFramework.framework.dSYM\n\nmv $BUILT_PRODUCTS_DIR/StoryFramework.framework/main $BUILT_PRODUCTS_DIR/StoryFramework.framework/StoryFramework\n\nmv $BUILT_PRODUCTS_DIR/StoryFramework.framework/Headers/main.h $BUILT_PRODUCTS_DIR/StoryFramework.framework/Headers/StoryFramework.h\n";
 		};
 /* End PBXShellScriptBuildPhase section */
-
-/* Begin PBXSourcesBuildPhase section */
-		8F02499D1B9989B1005D8035 /* Sources */ = {
-			isa = PBXSourcesBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-		};
-/* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
 		8F0249B41B9989B1005D8035 /* Debug */ = {
